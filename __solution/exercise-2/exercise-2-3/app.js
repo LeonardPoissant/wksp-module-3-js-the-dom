@@ -32,7 +32,7 @@ console.log(racers);
 
 // Assign them each to a lane
 // Lanes have ids of 'lane-#' as set in the lane creation phase.
-racers.forEach(function(racer, id) {
+    racers.forEach(function(racer, id) {
     // add the frogs to a lane
     // for now, frogs are simply shapes in the lane.
     const newFrog = document.createElement('span');

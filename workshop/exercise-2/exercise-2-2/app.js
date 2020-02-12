@@ -15,10 +15,8 @@ for(let i = 0; i<= FROGS; i ++){
     lanes.id = `frog-${i}`;
 }
 
-let racers = [];
+    // 2. Create li    
 
-for (let numFrogs = 0 ; numFrogs<=FROGS; numFrogs++){
-    const newFrog = frogStable[numFrogs];
-    racers.push(newFrog);
-}
-console.log(racers);
+    // 3. Create span and add it to the li
+
+    // 4. Assign an id to each lane

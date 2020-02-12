@@ -1,13 +1,15 @@
-// Preset values
+
+
 const FROGS = 3;
 
 const track = document.getElementById('track');
+
 
 // Exercise 2.1
 for (let laneCount = 1; laneCount <= FROGS; laneCount++) {
     let lane = document.createElement('li');
     track.appendChild(lane);
-    
+
     let number = document.createElement('span');
     number.innerText = laneCount;
     lane.appendChild(number);
@@ -49,45 +51,3 @@ racers.forEach(function(racer, id) {
     document.getElementById(`frog-${id+1}`).appendChild(frogProgress);
 });
 
-// (for Exercise 2.5)
-let ranking = [];
-
-// Exercise 2.4
-function racingFrog(racer) {
-    let progress = racer.progress;
-    const trackWidth = track.offsetWidth;
-
-    // set a random hop length
-    const hopLength = (Math.floor(Math.random() * 100) / trackWidth * 100);
-
-    const bounce = setInterval(function() {
-        // increase the progress by the random hopLength
-        progress += hopLength;
-        // Check if progress is more than 100%. If so, set it to 100.1
-        if (progress > 100) {
-            progress = 100.1;
-            console.log(racer.name, ' has finished!');
-            clearInterval(bounce);
-            
-            // (for Exercise 2.5)
-            ranking.push(racer);
-        }
-        
-        // Moving the frog on the screen
-        document.querySelector(`#${racer.lane} .frog`).style.left = `${progress}%`;
-    }, Math.random() * 1000);
-}
-
-// startRace
-racers.forEach(function(racer) {
-    // call this function once for each racer.
-    racingFrog(racer);
-});
-
-// Exercise 2.5
-const endRace = setInterval(function() {
-    if (ranking.length === racers.length) {
-        console.log(ranking);
-        clearInterval(endRace);
-    }
-}, 500);

@@ -6,7 +6,9 @@
 
 ```js
 // Example
-
+setTimeout(function(){
+    console.log('bouya')
+}, 3000);
 ```
 
 ---
@@ -15,7 +17,9 @@
 
 ```js
 // Example
-
+const myTimer = setInterval(function(){
+    console.log('here!);
+},1000);
 ```
 
 ---
@@ -27,7 +31,11 @@ This will require the `setInterval` to be declared.
 ```js
 // Example
 
-```
+const myTimer = setInterval(function(){
+    console.log('here!);
+},1000);
+
+clearInterval(myTimer);
 
 ---
 

@@ -88,6 +88,11 @@ Instead, we will use these methods
 ```js
 // Example
 
+document.getelementById('my-div')
+document.querySelector('#my-div')
+document.querySelector('body')
+document.querySelector('.my-class')
+
 ```
 
 ---
@@ -100,11 +105,14 @@ Instead, we will use these methods
 
 You can modify the content of a leaf, an end node with 
 
-- [`.innerText()`](https://www.w3schools.com/jsref/prop_node_innertext.asp)
-- [`.innerHTML()`](https://www.w3schools.com/jsref/prop_html_innerhtml.asp) 
+- [`.innerText`](https://www.w3schools.com/jsref/prop_node_innertext.asp)
+- [`.innerHTML`](https://www.w3schools.com/jsref/prop_html_innerhtml.asp) 
 
 ```js
 // Example
+myTitle = document.getElementById('my-title')
+
+myTitle.innerText = 'New title'
 
 ```
 
@@ -127,8 +135,10 @@ To add a new node to an HTML page, you need to do it in 3 steps.
 
 ```js
 // Example
+const abc= document.createElement('p');
+abc.innerText = 'new balalaclaclac';
+document.querySelector('body').appendChild('abc');
 
-```
 
 ---
 
